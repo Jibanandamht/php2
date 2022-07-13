@@ -5,14 +5,7 @@ if(isset($_POST['sbtn'])){
     $emailb = $_POST['emailb'];
   $sql = "INSERT INTO `emails`(`Email`) VALUES ('$emailb')";
   mysqli_query($conn,$sql);
-  if($conn->query($sql) == true){
-    //    echo" successfully inserted";
-          $insert=true;
-     }
-     else{
-        echo"ERROR: $sql <br> $con->error";
-     }
-     $conn->close();
+  header("Location:index.php");
     }
 ?>
 
